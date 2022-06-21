@@ -1,6 +1,8 @@
 package br.edu.ifsuldeminas.tarefas2.domain;
 
-public class Category {
+import java.io.Serializable;
+
+public class Category implements Serializable {
     private Integer id;
     private  String nome;
 

@@ -46,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (navController.getCurrentDestination().getId() == R.id.MainFragment)
                 navController.navigate(R.id.action_MainFragment_to_TaskFragment);
+
+                if (navController.getCurrentDestination().getId() == R.id.MainCategoryFragment)
+                    navController.navigate(R.id.action_MainCategoryFragment_to_CategoryFragment);
             }
         });
 
@@ -55,7 +58,8 @@ public class MainActivity extends AppCompatActivity {
                                              @NonNull NavDestination destination,
                                              @Nullable Bundle arguments) {
                 binding.fab.setVisibility(FloatingActionButton.VISIBLE);
-                if (navController.getCurrentDestination().getId() != R.id.MainFragment){
+                if (navController.getCurrentDestination().getId() != R.id.MainFragment &&
+                        navController.getCurrentDestination().getId() != R.id.MainCategoryFragment){
                     binding.fab.setVisibility(FloatingActionButton.INVISIBLE);
                 }
             }
@@ -77,7 +81,8 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.action_categories) {
+            navController.navigate(R.id.action_MainFragment_to_MainCategoryFragment);
             return true;
         }
 

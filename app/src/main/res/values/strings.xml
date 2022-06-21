@@ -13,4 +13,8 @@
     <string name="task_done">Tarefa concluída</string>
     <string name="task_updated">Tarefa atualizada</string>
     <string name="delete_task">Concluir Tafera</string>
+    <string name="delete_category">Excluir categoria</string>
+    <string name="category_fragment_title">Categorias</string>
+    <string name="fragment_category_title">Cadastrar Categoria</string>
+    <string name="category_description_empty">Descrição da categoria não pode ser vazia</string>
 </resources>

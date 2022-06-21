@@ -14,6 +14,9 @@
         <action
             android:id="@+id/action_MainFragment_to_TaskFragment"
             app:destination="@id/TaskFragment" />
+        <action
+            android:id="@+id/action_MainFragment_to_MainCategoryFragment"
+            app:destination="@id/MainCategoryFragment" />
     </fragment>
     <fragment
         android:id="@+id/TaskFragment"
@@ -24,5 +27,23 @@
         <action
             android:id="@+id/action_TaskFragment_to_MainFragment"
             app:destination="@id/MainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/MainCategoryFragment"
+        android:name="br.edu.ifsuldeminas.tarefas2.MainCategoryFragment"
+        android:label="@string/category_fragment_title"
+        tools:layout="@layout/fragment_main_category">
+        <action
+            android:id="@+id/action_MainCategoryFragment_to_CategoryFragment"
+            app:destination="@id/CategoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/CategoryFragment"
+        android:name="br.edu.ifsuldeminas.tarefas2.CategoryFragment"
+        android:label="@string/fragment_category_title"
+        tools:layout="@layout/fragment_category">
+        <action
+            android:id="@+id/action_CategoryFragment_to_MainCategoryFragment"
+            app:destination="@id/MainCategoryFragment" />
     </fragment>
 </navigation>
